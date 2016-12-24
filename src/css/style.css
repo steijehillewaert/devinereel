@@ -5,3 +5,8 @@ body {
   font-size: 3rem;
   margin: 2rem;
 }
+
+iframe {
+  width: 100vw;
+  height: 50vh;
+}

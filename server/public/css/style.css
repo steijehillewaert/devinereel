@@ -64,4 +64,9 @@ body {
   margin: 2rem;
 }
 
+iframe {
+  width: 100vw;
+  height: 50vh;
+}
+
 /*# sourceMappingURL=style.css.map*/
