@@ -3,12 +3,16 @@ import React, {PropTypes} from 'react';
 const Display = ({
   student,
   course,
+  year,
   }) => {
 
   return (
-    <iframe src={`https://student.howest.be/${student}/20152016/${course}`}>
+    year && course && student ?
+    <iframe src={`https://student.howest.be/${student}/${year}/${course}`}>
 
     </iframe>
+    :
+    `Kies een jaar, vak en student!`
   );
 
 };
@@ -16,6 +20,7 @@ const Display = ({
 Display.propTypes = {
   student: PropTypes.string,
   course: PropTypes.string,
+  year: PropTypes.number,
 };
 
 export default Display;

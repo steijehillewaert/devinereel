@@ -15,8 +15,9 @@ const students = [`kevin.meyvaert`];
 class App extends Component {
 
   state = {
-    course: `CPIII`,
+    course: `BAD`,
     student: `kevin.meyvaert`,
+    year: 20142015,
   };
 
   handleCourseInput = courseInput => {
@@ -32,15 +33,21 @@ class App extends Component {
     this.setState({student});
   }
 
+  handleYearInput = yearInput => {
+    let {year} = this.state;
+    year = yearInput.target.value;
+    this.setState({year});
+  }
+
   render() {
-    const {student, course} = this.state;
+    const {student, course, year} = this.state;
     return (
       <div>
         <nav>
-          <select className='year-list'>
-            <option>Jaar 1</option>
-            <option>Jaar 2</option>
-            <option>Jaar 3</option>
+          <select className='year-list' onChange={this.handleYearInput} value={year}>
+            <option value='20142015'>2014-2015</option>
+            <option value='20152016'>2015-2016</option>
+            <option value='20162017'>2016-2017</option>
           </select>
           <CourseList
             courses={courses}
@@ -53,7 +60,7 @@ class App extends Component {
             onChangeStudentInput={this.handleStudentInput}
           />
         </nav>
-        <Display course={course} student={student} />
+        <Display course={course} student={student} year={year} />
       </div>
     );
   }
