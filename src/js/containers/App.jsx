@@ -4,13 +4,8 @@ import StudentList from '../components/StudentList';
 import CourseList from '../components/CourseList';
 import Display from '../components/Display';
 
-const courses = [
-  `FUD`, `BAD`, `MAII`, `MAI`,
-  `COD`, `FRD3`, `MAIII`, `WAD`, `ND`, `MAIV`,
-  `MAV`, `EXW`,
-];
-
-const students = [`kevin.meyvaert`];
+import Courses from '../static/courses';
+import Students from '../static/students';
 
 class App extends Component {
 
@@ -50,12 +45,12 @@ class App extends Component {
             <option value='20162017'>2016-2017</option>
           </select>
           <CourseList
-            courses={courses}
+            courses={Courses}
             currentCourse={course}
             onChangeCourseInput={this.handleCourseInput}
           />
           <StudentList
-            students={students}
+            students={Students}
             currentStudent={student}
             onChangeStudentInput={this.handleStudentInput}
           />
