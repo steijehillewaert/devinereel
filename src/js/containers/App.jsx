@@ -7,10 +7,7 @@ const App = () => {
   return (
     <Router>
       <main>
-        <Match
-          exactly pattern='/'
-          component={Home}
-        />
+        <Match exactly pattern='/' component={Home} />
       </main>
     </Router>
   );

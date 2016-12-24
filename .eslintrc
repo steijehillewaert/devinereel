@@ -1,3 +1,6 @@
 {
-  "extends": "devine/react"
+  "extends": "devine/react",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"]
+  }
 }
