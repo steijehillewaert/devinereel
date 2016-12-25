@@ -39,25 +39,31 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <select className='year-list' onChange={this.handleYearInput} value={year}>
-            <option value='20142015'>2014-2015</option>
-            <option value='20152016'>2015-2016</option>
-            <option value='20162017'>2016-2017</option>
-          </select>
-          <CourseList
-            courses={Courses}
-            currentCourse={course}
-            onChangeCourseInput={this.handleCourseInput}
-          />
-          <StudentList
-            students={Students}
-            currentStudent={student}
-            onChangeStudentInput={this.handleStudentInput}
-          />
+          <div className='nav-inputs'>
+            <select className='year-list' onChange={this.handleYearInput} value={year}>
+              <option value='20142015'>2014-2015</option>
+              <option value='20152016'>2015-2016</option>
+              <option value='20162017'>2016-2017</option>
+            </select>
+            <CourseList
+              courses={Courses}
+              currentCourse={course}
+              onChangeCourseInput={this.handleCourseInput}
+            />
+            <StudentList
+              students={Students}
+              currentStudent={student}
+              onChangeStudentInput={this.handleStudentInput}
+            />
+          </div>
+          <button>
+            Add yourself!
+          </button>
         </nav>
         <Display course={course} student={student} year={year} />
       </div>
     );
   }
 }
+
 export default App;
