@@ -163,6 +163,7 @@ footer {
   height:
     80px;
   height: 5rem;
+  width: 100vw;
   color:
     #231f20;
   font-size:
@@ -177,6 +178,8 @@ footer {
   padding-bottom:
     27.2px;
   padding-bottom: 1.7rem;
+  position: absolute;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map*/
