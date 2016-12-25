@@ -1,18 +1,26 @@
-import React, {Component} from 'react';
+import React, {PropTypes} from 'react';
 
-export default class Display extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {};
-  }
+const Display = ({
+  student,
+  course,
+  year,
+  }) => {
 
-  render() {
-    const {student, course} = this.state;
+  return (
+    year && course && student ?
+    <iframe src={`https://student.howest.be/${student}/${year}/${course}`}>
 
-    return (
-      <iframe src={`https://student.howest.be/${student}/${course}`}>
+    </iframe>
+    :
+    `Kies een jaar, vak en student!`
+  );
 
-      </iframe>
-    );
-  }
-}
+};
+
+Display.propTypes = {
+  student: PropTypes.string,
+  course: PropTypes.string,
+  year: PropTypes.number,
+};
+
+export default Display;
