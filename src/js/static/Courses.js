@@ -1,6 +1,6 @@
 const Courses = [
   `FUD`, `BAD`, `MAII`, `MAI`,
-  `COD`, `FRD3`, `MAIII`, `WAD`, `ND`, `MAIV`,
+  `COD`, `FRD3`, `maIII`, `WAD`, `ND`, `MAIV`,
   `MAV`, `EXW`,
 ];
 
