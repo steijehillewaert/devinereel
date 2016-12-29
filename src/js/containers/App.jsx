@@ -11,7 +11,8 @@ class App extends Component {
 
   state = {
     course: undefined,
-    student: undefined,
+    name: undefined,
+    url: undefined,
     year: `${new Date().getFullYear()}${new Date().getFullYear() + 1}`,
   };
 
@@ -22,9 +23,15 @@ class App extends Component {
   }
 
   handleStudentInput = studentInput => {
-    let { student } = this.state;
-    student = studentInput.target.value;
-    this.setState({ student });
+    let { url } = this.state;
+
+    const formatted = studentInput.target.value.replace(/ /g, `.`).toLowerCase();
+    formatted.length > 18 ? url = `${formatted.substr(0, 18)}1` : url = `${formatted}`;
+
+    this.setState({
+      name: studentInput.target.value,
+      url,
+    });
   }
 
   handleYearInput = yearInput => {
@@ -34,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    const { student, course, year } = this.state;
+    const { name, url, course, year } = this.state;
     return (
       <div>
         <nav>
@@ -51,7 +58,7 @@ class App extends Component {
             />
             <StudentList
               students={Students}
-              currentStudent={student}
+              currentStudent={name}
               onChangeStudentInput={this.handleStudentInput}
             />
           </div>
@@ -60,7 +67,7 @@ class App extends Component {
             <button>Not in the list? Add yourself!</button>
           </a>
         </nav>
-        <Display course={course} student={student} year={year} />
+        <Display course={course} student={name} url={url} year={year} />
       </div>
     );
   }

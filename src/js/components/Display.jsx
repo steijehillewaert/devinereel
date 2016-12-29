@@ -1,15 +1,15 @@
 import React, { PropTypes } from 'react';
 
-const Display = ({ student, course, year }) => {
+const Display = ({ url, course, year }) => {
   return (
-    student && course && student !== `---`
-    ? <iframe src={`https://student.howest.be/${student}/${year}/${course}`}></iframe>
+    url && course && url !== `---`
+    ? <iframe src={`https://student.howest.be/${url}/${year}/${course}`}></iframe>
     : <section className='no-input'>Kies een jaar, vak en student!</section>
   );
 };
 
 Display.propTypes = {
-  student: PropTypes.string,
+  url: PropTypes.string,
   course: PropTypes.string,
   year: PropTypes.string.isRequired,
 };

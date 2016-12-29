@@ -1,38 +1,125 @@
 const DEV1 = [];
 
 const DEV2 = [
-  `lotte.bijlsma`,
-  `julie.van.beethoven`,
+  {
+    name: `Lotte Bijlsma`,
+    url: `lotte.bijlsma`,
+  },
+  {
+    name: `Julie Van Beethoven`,
+    url: `julie.van.beethoven`,
+  },
 ];
 
 const DEV3 = [
-  `thibault.maekelber1`,
-  `kevin.meyvaert`,
-  `emiel.vandenbroeck`,
-  `elise.van.oosten`,
-  `anthony.magnus`,
-  `jonas.leupe`,
-  `wannes.monchy`,
-  `benoit.bosschaert`,
-  `daphne.danneels`,
-  `jonas.devacht`,
-  `jordy.wittouck`,
-  `katia.smet`,
-  `alex.bernard`,
-  `suzan.van.dijck`,
-  `bernd.bousard`,
-  `kevin.hendrickx`,
-  `samuel.de.poorter`,
-  `thorr.stevens`,
-  `dieter.cafmeyer`,
-  `emiel.van.betsbrug1`,
-  `kevin.waelkens`,
-  `nicolaas.koelewijn`,
-  `sebastien.henau`,
-  `maxim.de.groote`,
-  `arne.deprez`,
-  `jesse.de.boitselier`,
-  `gert-jan.wille`,
+  {
+    name: `Thibault Maekelbergh`,
+    url: `thibault.maekelber1`,
+  },
+  {
+    name: `Kevin Meyvaert`,
+    url: `kevin.meyvaert`,
+  },
+  {
+    name: `Emiel Vandenbroeck`,
+    url: `emiel.vandenbroeck`,
+  },
+  {
+    name: `Elise Van Oosten`,
+    url: `elise.van.oosten`,
+  },
+  {
+    name: `Anthony Magnus`,
+    url: `anthony.magnus`,
+  },
+  {
+    name: `Jonas Leupe`,
+    url: `jonas.leupe`,
+  },
+  {
+    name: `Wannes Monchy`,
+    url: `wannes.monchy`,
+  },
+  {
+    name: `Benoit Bosschaert`,
+    url: `benoit.bosschaert`,
+  },
+  {
+    name: `Daphné Danneels`,
+    url: `daphne.danneels`,
+  },
+  {
+    name: `Jonas Devacht`,
+    url: `jonas.devacht`,
+  },
+  {
+    name: `Jordy Wittouck`,
+    url: `jordy.wittouck`,
+  },
+  {
+    name: `Katia Smet`,
+    url: `katia.smet`,
+  },
+  {
+    name: `Alex Bernard`,
+    url: `alex.bernard`,
+  },
+  {
+    name: `Suzan Van Dijck`,
+    url: `suzan.van.dijck`,
+  },
+  {
+    name: `Bernd Bousard`,
+    url: `bernd.bousard`,
+  },
+  {
+    name: `Kevin Hendrickx`,
+    url: `kevin.hendrickx`,
+  },
+  {
+    name: `Samuel De Poorter`,
+    url: `samuel.de.poorter`,
+  },
+  {
+    name: `Thorr Stevens`,
+    url: `thorr.stevens`,
+  },
+  {
+    name: `Dieter Cafmeyer`,
+    url: `dieter.cafmeyer`,
+  },
+  {
+    name: `Emiel Van Betsbrugge`,
+    url: `emiel.van.betsbrug1`,
+  },
+  {
+    name: `Kevin Waelkens`,
+    url: `kevin.waelkens`,
+  },
+  {
+    name: `Nicolaas Koelewijn`,
+    url: `nicolaas.koelewijn`,
+  },
+  {
+    name: `Sébastien Henau`,
+    url: `sebastien.henau`,
+  },
+  {
+    name: `Maxim De Groote`,
+    url: `maxim.de.groote`,
+  },
+  {
+    name: `Arne Deprez`,
+    url: `arne.deprez`,
+  },
+  {
+    name: `Jesse De Boitselier`,
+    url: `jesse.de.boitselier`,
+  },
+  {
+    name: `Gert-Jan Wille`,
+    url: `gert-jan.wille`,
+  },
 ];
 
-export default [`---`, ...DEV1, ...DEV2, ...DEV3];
+export default [{ name: `---` }, ...DEV1, ...DEV2, ...DEV3];

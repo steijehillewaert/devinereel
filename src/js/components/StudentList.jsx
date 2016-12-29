@@ -5,12 +5,11 @@ const StudentList = ({
   currentStudent,
   onChangeStudentInput: handleStudentInput,
   }) => {
-
   return (
     <select className='student-list' onChange={handleStudentInput} value={currentStudent}>
-      {students.sort().map(student =>
+      {students.map(student =>
         <option key={Math.random()}>
-          {student}
+          {student.name}
         </option>
       )}
     </select>
