@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import StudentList from '../components/StudentList';
-import CourseList from '../components/CourseList';
-import Display from '../components/Display';
+import StudentList from 'src/js/components/StudentList';
+import CourseList from 'src/js/components/CourseList';
+import Display from 'src/js/components/Display';
 
-import Courses from '../static/courses';
-import Students from '../static/students';
+import Courses from 'src/js/static/courses';
+import Students from 'src/js/static/students';
 
 class App extends Component {
 
