@@ -8,7 +8,7 @@ const StudentList = ({
 
   return (
     <select className='student-list' onChange={handleStudentInput} value={currentStudent}>
-      {students.map(student =>
+      {students.sort().map(student =>
         <option key={Math.random()}>
           {student}
         </option>
