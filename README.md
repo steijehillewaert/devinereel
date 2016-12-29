@@ -18,7 +18,7 @@ Either click the button (__Opt. A__) in [the application](https://devineviewer.h
 2. __Option B:__ will make you supercool and will guarantee a stable code career throughout Devine (_at least, this is what we think_ 💁)
 
 ## Maintainers
-> Current maintainers: [Thibault Maekelbergh](https://github.com/thibmaek), [Kevin Meyvaert](https://github.com/kevinmeyvaert), [Lotte Bijlsma](https://github.com/bijlsmalotte)
+> Current maintainers: [Thibault Maekelbergh](https://github.com/thibmaek), [Kevin Meyvaert](https://github.com/kevinmeyvaert), [Lotte Bijlsma](https://github.com/lottebijlsma)
 
 __We will gladly turn over this repo to someone else once we graduate. Long live OSS ❤️__
 
