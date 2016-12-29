@@ -16,6 +16,8 @@ body {
   font-size: 3rem;
 }
 
+.link-wrapper {background: none !important;} /* stylelint-disable-line */
+
 a,
 a:link,
 a:active,
@@ -59,6 +61,17 @@ nav {
   font-size: 1.3rem;
   border: none;
   background-color: var(--devine-pink-lighter);
+}
+
+.no-input {
+  margin-top: 2rem;
+  text-align: center;
+
+  &::before, &::after {
+    content: '😢';
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
 }
 
 iframe {

@@ -8,11 +8,7 @@ const CourseList = ({
 
   return (
     <select className='course-list' onChange={handleCourseInput} value={currentCourse}>
-      {courses.map(course =>
-        <option key={Math.random()}>
-          {course}
-        </option>
-      )}
+      {courses.map(course => <option key={Math.random()}>{course}</option>)}
     </select>
   );
 };

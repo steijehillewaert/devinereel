@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
 
-import StudentList from '../components/StudentList';
-import CourseList from '../components/CourseList';
-import Display from '../components/Display';
+import StudentList from 'src/js/components/StudentList';
+import CourseList from 'src/js/components/CourseList';
+import Display from 'src/js/components/Display';
 
-import Courses from '../static/courses';
-import Students from '../static/students';
+import Courses from 'src/js/static/courses';
+import Students from 'src/js/static/students';
 
 class App extends Component {
 
   state = {
-    course: `BAD`,
-    student: `kevin.meyvaert`,
-    year: 20142015,
+    course: undefined,
+    student: undefined,
+    year: `${new Date().getFullYear()}${new Date().getFullYear() + 1}`,
   };
 
   handleCourseInput = courseInput => {
     let {course} = this.state;
     course = courseInput.target.value;
     this.setState({course});
-    console.log(this.state);
   }
 
   handleStudentInput = studentInput => {
@@ -56,9 +55,10 @@ class App extends Component {
               onChangeStudentInput={this.handleStudentInput}
             />
           </div>
-          <button>
-            Add yourself!
-          </button>
+          <a className='link-wrapper'
+            href='https://github.com/thibmaek/devineviewer/edit/develop/src/js/static/Students.js'>
+            <button>Add yourself!</button>
+          </a>
         </nav>
         <Display course={course} student={student} year={year} />
       </div>

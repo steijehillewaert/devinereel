@@ -1,7 +1,7 @@
-const Courses = [
-  `FUD`, `BAD`, `MAII`, `MAI`,
-  `COD`, `FRD3`, `maIII`, `WAD`, `ND`, `MAIV`,
-  `MAV`, `EXW`,
-];
+const DEV1 = [`BAD`, `MAII`, `MAI`];
 
-export default Courses;
+const DEV2 = [`COD`, `FRD3`, `maIII`, `WAD`, `ND`, `MAIV`];
+
+const DEV3 = [`MAV`, `EXW`];
+
+export default [`---`, ...DEV1, ...DEV2, ...DEV3];
