@@ -16,6 +16,8 @@ body {
   font-size: 3rem;
 }
 
+.link-wrapper {background: none !important;} /* stylelint-disable-line */
+
 a,
 a:link,
 a:active,
