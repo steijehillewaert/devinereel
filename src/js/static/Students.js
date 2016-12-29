@@ -22,7 +22,7 @@ const DEV3 = [
   `suzan.van.dijck`,
   `bernd.bousard`,
   `kevin.hendrickx`,
-  `samuel.de.poorter`,
+  `samuel.de.pooter`,
   `thorr.stevens`,
   `dieter.cafmeyer`,
   `emiel.van.betsbrug1`,
