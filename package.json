@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "scripts": {
     "development": "npm run clean && NODE_ENV=development webpack-dev-server --open",
-    "start": "npm run serve",
+    "start": "npm run production && npm run serve",
     "serve": "serve ./dist -s -u",
     "clean": "rimraf ./dist/",
-    "production": "npm run clean && NODE_ENV=production webpack -p"
+    "production": "npm run clean && NODE_ENV=production webpack -p",
+    "deploy": "git checkout master && git pull && git push heroku master"
   },
-  "main": "server/index.js",
+  "main": "",
   "engines": {
     "node": "7.3.0"
   },
