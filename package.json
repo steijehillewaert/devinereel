@@ -7,7 +7,7 @@
     "serve": "serve ./dist -s -u",
     "clean": "rimraf ./dist/",
     "production": "npm run clean && NODE_ENV=production webpack -p",
-    "deploy": "git checkout master && git pull && npm run production &&  git push heroku master"
+    "deploy": "git checkout master && git pull && npm run production && git add . && git commit -m \":rocket: Deploy to Heroku\" && git push heroku master"
   },
   "main": "",
   "engines": {
