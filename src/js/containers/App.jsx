@@ -55,7 +55,7 @@ class App extends Component {
               onChangeStudentInput={this.handleStudentInput}
             />
           </div>
-          <button>
+          <button onClick={() => location.href = `https://github.com/thibmaek/devineviewer`}>
             Add yourself!
           </button>
         </nav>

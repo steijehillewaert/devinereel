@@ -61,6 +61,17 @@ nav {
   background-color: var(--devine-pink-lighter);
 }
 
+.no-input {
+  margin-top: 2rem;
+  text-align: center;
+
+  &::before, &::after {
+    content: '😢';
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+}
+
 iframe {
   width: 100vw;
   height: 90vh;
