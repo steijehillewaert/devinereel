@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-const Display = ({student, course, year}) => {
+const Display = ({ student, course, year }) => {
   return (
     student && course && student !== `---`
     ? <iframe src={`https://student.howest.be/${student}/${year}/${course}`}></iframe>

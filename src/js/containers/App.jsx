@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import StudentList from 'src/js/components/StudentList';
 import CourseList from 'src/js/components/CourseList';
@@ -16,25 +16,25 @@ class App extends Component {
   };
 
   handleCourseInput = courseInput => {
-    let {course} = this.state;
+    let { course } = this.state;
     course = courseInput.target.value;
-    this.setState({course});
+    this.setState({ course });
   }
 
   handleStudentInput = studentInput => {
-    let {student} = this.state;
+    let { student } = this.state;
     student = studentInput.target.value;
-    this.setState({student});
+    this.setState({ student });
   }
 
   handleYearInput = yearInput => {
-    let {year} = this.state;
+    let { year } = this.state;
     year = yearInput.target.value;
-    this.setState({year});
+    this.setState({ year });
   }
 
   render() {
-    const {student, course, year} = this.state;
+    const { student, course, year } = this.state;
     return (
       <div>
         <nav>

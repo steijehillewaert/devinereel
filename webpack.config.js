@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const webpack = require(`webpack`);
-const {UglifyJsPlugin} = webpack.optimize;
+const { UglifyJsPlugin } = webpack.optimize;
 
 const CopyWebpackPlugin = require(`copy-webpack-plugin`);
 const ExtractTextWebpackPlugin = require(`extract-text-webpack-plugin`);
@@ -30,7 +30,7 @@ const config = {
   },
 
   output: {
-    path: path.join(__dirname, `server`, `public`),
+    path: path.join(__dirname, `dist`),
     filename: `js/[name].[hash].js`,
     publicPath,
   },
@@ -38,20 +38,15 @@ const config = {
   devtool: `source-map`,
 
   module: {
-
     rules: [
       {
         test: /\.css$/,
         loader: extractCSS.extract([
           {
             loader: `css-loader`,
-            options: {
-              importLoaders: 1,
-            },
+            options: { importLoaders: 1 },
           },
-          {
-            loader: `postcss-loader`,
-          },
+          { loader: `postcss-loader` },
         ]),
       },
       {
@@ -70,14 +65,10 @@ const config = {
         test: /\.(jsx?)$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: `babel-loader`,
-          },
+          { loader: `babel-loader` },
           {
             loader: `eslint-loader`,
-            options: {
-              fix: true,
-            },
+            options: { fix: true },
           },
         ],
       },
@@ -99,19 +90,12 @@ const config = {
         },
       },
     ],
-
   },
 
-  plugins: [
-    extractCSS,
-    copy,
-  ],
-
+  plugins: [extractCSS, copy],
 };
 
 if (process.env.NODE_ENV === `production`) {
-
-  //image optimizing
   config.module.rules.push({
     test: /\.(svg|png|jpe?g|gif)$/,
     loader: `image-webpack-loader`,
@@ -121,17 +105,13 @@ if (process.env.NODE_ENV === `production`) {
   config.plugins = [
     ...config.plugins,
     new UglifyJsPlugin({
-      sourceMap: true, // false returns errors.. -p + plugin conflict
+      sourceMap: true,
       comments: false,
     }),
   ];
 
 } else {
-
-  config.performance = {
-    hints: false,
-  };
-
+  config.performance = { hints: false };
 }
 
 config.plugins = [...config.plugins, ...configHtmls.plugins];

@@ -1,5 +1,5 @@
 {
-  "ignoreFiles": "./server/public/**/*.css",
+  "ignoreFiles": "./dist/**/*.css",
   "extends": "stylelint-config-devine",
   "rules": {
     "value-list-comma-newline-after": null
