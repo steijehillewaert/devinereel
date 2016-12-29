@@ -10,16 +10,15 @@ import Students from 'src/js/static/students';
 class App extends Component {
 
   state = {
-    course: `BAD`,
-    student: `kevin.meyvaert`,
-    year: 20142015,
+    course: undefined,
+    student: undefined,
+    year: `${new Date().getFullYear()}${new Date().getFullYear() + 1}`,
   };
 
   handleCourseInput = courseInput => {
     let {course} = this.state;
     course = courseInput.target.value;
     this.setState({course});
-    console.log(this.state);
   }
 
   handleStudentInput = studentInput => {

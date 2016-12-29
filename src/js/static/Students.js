@@ -1,7 +1,12 @@
-const Students = [
-  `kevin.meyvaert`,
-  `thibault.maekelber1`,
+const DEV1 = [];
+
+const DEV2 = [
   `lotte.bijlsma`,
 ];
 
-export default Students;
+const DEV3 = [
+  `kevin.meyvaert`,
+  `thibault.maekelber1`,
+];
+
+export default [`---`, ...DEV1, ...DEV2, ...DEV3];
