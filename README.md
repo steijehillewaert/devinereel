@@ -12,7 +12,7 @@ The list of year three students _at this time_ was included in initial v1 releas
 
 ## Adding yourself
 It's highly possible that you are not in the list. Fear not, there is an easy way to add yourself.
-Either click the button (__Opt. A__) in [the application](https://devineviewer.herokuapp.com) or submit a pr (__Opt. B__) to [`src/js/static/Students.js`](./src/js/static/Students.js)
+Either click the button (__Opt. A__) in [the application](https://devinereel.herokuapp.com) or submit a pr (__Opt. B__) to [`src/js/static/Students.js`](./src/js/static/Students.js)
 
 1. __Option A:__ will automatically fork this repo, create a patch branch and submit a PR. Please name your pr accordingly. 'Update Students.js' ain't no fun either. Oh and all this is of course only if you have a Github account, duh 🤷
 2. __Option B:__ will make you supercool and will guarantee a stable code career throughout Devine (_at least, this is what we think_ 💁)
