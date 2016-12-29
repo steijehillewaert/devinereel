@@ -14,6 +14,7 @@ body {
     -apple-system, BlinkMacSystemFont, Roboto, Ubuntu,
     'Fira Sans', 'Droid Sans', Helvetica, Arial, sans-serif;
   font-size: 3rem;
+  background-color: color(var(--devine-black) a(20%));
 }
 
 .link-wrapper {background: none !important;} /* stylelint-disable-line */
@@ -31,45 +32,71 @@ a:hover {
 }
 
 nav {
-  background-color: var(--devine-blue);
+  background-color: #efefef;
   height: 5rem;
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  box-shadow: color(var(--devine-black) a(20%)) 0 2px 5px 0;
+  padding-top: .5rem;
 
   & button {
     height: 3rem;
     align-self: center;
     background-color: var(--devine-pink-lighter);
     color: white;
+    cursor: pointer;
     font-size: 1.5rem;
     border: 0;
     border-radius: .3rem;
     margin-right: 2rem;
+    position: relative;
 
     &::after {
       content: '😘';
       margin-left: .5rem;
       vertical-align: middle;
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: .5rem;
+      bottom: 0;
+      left: 0;
+      background-color: color(var(--devine-pink-lighter) shade(10%));
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all .3s ease-in-out 0s;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
+}
+
+.nav-inputs {
+  margin-left: 1rem;
 }
 
 .year-list, .course-list, .student-list {
   margin-left: 1rem;
-  color: inherit;
+  color: var(--devine-black);
   font-size: 1.3rem;
   border: none;
-  background-color: var(--devine-pink-lighter);
+  background-color: color(var(--devine-blue) a(30%));
 }
 
 .no-input {
-  margin-top: 2rem;
+  margin-top: 20%;
   text-align: center;
 
   &::before, &::after {
     content: '😢';
-    margin-right: .5rem;
+    margin: 2rem;
     vertical-align: middle;
   }
 }
