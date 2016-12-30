@@ -1,4 +1,6 @@
-const DEV1 = [];
+const DEV1 = [
+  'steije.hillewaert'    
+];
 
 const DEV2 = [
   `lotte.bijlsma`,
